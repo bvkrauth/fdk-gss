@@ -4,7 +4,9 @@ This folder contains all cleaned 2011 GSS data.
 
 ## Usage
 
-This folder should be left alone.
+Other than this readme file, the contents of this folder
+are generated and used by the Stata code in the *Code*
+folder.
 
 ## Contents
 

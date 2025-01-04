@@ -7,10 +7,10 @@ and analysis.
 
 To generate all results, just follow these two steps:
 
-1. Review the file and folder locations set in config.do, and modify if required.
-2. Run master.do in Stata.
+1. Review the file and folder locations set in *config.do*, and modify if required.
+2. Run *master.do* in Stata.
 
-The results will appear in the Results folder.
+The results will appear in the *Results* folder.
 
 ## Contents
 
