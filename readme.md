@@ -16,7 +16,6 @@ in the *Code* folder.
 
 | File/folder name        |  Description                                               |
 |:------------------------|:-----------------------------------------------------------|
-| 89-650-x2012001-eng.pdf | Statistics Canada report on families based on the 2011 GSS |
 | Code/                   | Stata code to clean data and generate results              |
 | RawData/                | Raw GSS data                                               |
 | CleanData/              | Cleaned GSS data                                           |

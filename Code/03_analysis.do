@@ -203,3 +203,15 @@ ta MAR_Q133 ccp if PRV != 24 & SEX == 2, row nofreq
 ta MAR_Q133 ccs if PRV != 24 & SEX == 2, row nofreq
 
 log close
+
+/* GET STATISTICS CANADA DOCUMENT */
+// See if the document already exists
+capture confirm file "${results}/89-650-x2012001-eng.pdf"
+// If not, need to download
+if (_rc > 0) {
+	di "Document not found, downloading from Statistics Canada" _rc
+	local url "https://www150.statcan.gc.ca/n1/pub/89-650-x/89-650-x2012001-eng.pdf"
+	local pdf_file "${results}/89-650-x2012001-eng.pdf"
+	// Download the file
+	copy "`url'" "`pdf_file'"
+}
