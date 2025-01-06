@@ -7,7 +7,8 @@ and analysis.
 
 To generate all results, just follow these two steps:
 
-1. Review the file and folder locations set in *config.do*, and modify if required.
+1. Review the file and folder locations set in *config.do*, and modify if
+   required.
 2. Run *master.do* in Stata.
 
 The results will appear in the *Results* folder.
@@ -15,12 +16,13 @@ The results will appear in the *Results* folder.
 ## Contents
 
 | File name         |  Description                                       |
-|:-----------------|:--------------------------------------------------|
+|:------------------|:---------------------------------------------------|
 | master.do         | Master file - generates all results from beginning |
 | 01_read_gss.do    | Download raw GSS data and put in Stata format      |
 | 02_clean_gss.do   | Clean GSS data                                     |
 | 03_analysis.do    | Analyze GSS data                                   |
-| config.do         | helper file, set global variables                 |
+| 03_analysis.smd   | helper file, dynamic document for 03_analysis.do   |
+| config.do         | helper file, set global variables                  |
 | dictionary.dct    | helper file, GSS dictionary                        |
 | label_define.do   | helper file, define value labels                   |
 | label_values.do   | helper file, apply value labels                    |

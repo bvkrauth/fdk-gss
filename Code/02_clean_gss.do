@@ -83,5 +83,14 @@ forvalues age = 0/14 {
     label variable cc`age'_type "Type of child care for age `age' child"
 }
 
+* Region (BC/Quebec/ROC)
+recode PRV (59 = 1 "BC") (24 = 2 "Quebec") (else = 3 "ROC") , gen(region)
+label variable region "Province"
+
+* Partner in household?
+label define partner 0 "No partner in household" 1 "Partner in household" , replace
+gen partner:partner = (SEXPR > 0)
+label variable partner "Partner in household?"
+
 compress
 save "${clean_data}/clean_gss", replace
