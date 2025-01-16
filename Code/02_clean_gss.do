@@ -4,6 +4,7 @@ run config.do
 /* READ IN DATA */
 use "${clean_data}/gss", clear
 
+/* CLEAN DATA */
 drop WTBS*
 
 label define cc 0 "No" 1 "Yes, but not on a regular basis" 2 "Yes, on a regular basis" , replace
@@ -92,5 +93,12 @@ label define partner 0 "No partner in household" 1 "Partner in household" , repl
 gen partner:partner = (SEXPR > 0)
 label variable partner "Partner in household?"
 
+/* TIDY UP AND SAVE */
 compress
 save "${clean_data}/clean_gss", replace
+
+/* DELETE RAW DATA TO SAVE SPACE IF REQUESTED */
+if "`1'" == "delete-raw-data" {
+	di "Deleting raw data file"
+	erase "${clean_data}/gss.dta"
+}
